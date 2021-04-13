@@ -38,6 +38,16 @@ namespace proyectoHPC.Controllers
             return View();
         }
 
+        public IActionResult entorno()
+        {
+            return View();
+        }
+
+        public IActionResult lugaresTuristicos()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
