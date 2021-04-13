@@ -1,4 +1,9 @@
-﻿.carousel-inner{
-    float: left;
+﻿.margen{
+    float:left;
     margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.texto {
+    margin-bottom: 425px;
 }
