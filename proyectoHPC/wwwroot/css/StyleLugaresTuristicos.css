@@ -20,3 +20,9 @@
 	border-top-right-radius: calc(0.25rem - 1px);
 }
 
+
+
+.p-3 mb-3 bg-dark shadow-lg{
+	background-color:aqua;
+}
+
