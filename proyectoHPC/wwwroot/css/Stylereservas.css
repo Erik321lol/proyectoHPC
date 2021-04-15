@@ -1,0 +1,11 @@
+﻿.text_box_nombre{
+    position: relative;
+    top: 40px;
+    left: 30px;
+}
+
+.text_box_apellido {
+    position: relative;
+    top: 40px;
+    left: 250px;
+}
