@@ -1,0 +1,14 @@
+﻿.entrar {
+    position:relative;
+    top: 100px;
+    left: 150px;
+}
+.salida {
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
+
+.carrusel {
+    position:center;
+}
