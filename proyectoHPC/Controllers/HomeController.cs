@@ -48,6 +48,11 @@ namespace proyectoHPC.Controllers
             return View();
         }
 
+        public IActionResult reservas()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
