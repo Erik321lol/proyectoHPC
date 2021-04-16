@@ -1,5 +1,27 @@
 ﻿.salida {
     position: relative;
-    top: 200px;
-    left: 150px;
+    top: 100px;
+    left: 400px;
+    display:block;
+}
+
+.entrada {
+    position: relative;
+    top: 100px;
+    left: 200px;
+
+}
+
+.cantidad {
+    position: relative;
+    top: 100px;
+    left: 600px;
+}
+
+.item {
+    position: relative;
+    top: 75px;
+    left: 200px;
+    float: left;
+    margin: 0 0 0 20px;
 }
