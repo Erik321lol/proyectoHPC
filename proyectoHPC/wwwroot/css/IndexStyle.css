@@ -2,7 +2,7 @@
 .item {
     position: relative;
     top: 75px;
-    left: 350px;
+    left: 300px;
     float: left;
     margin: 0 0 0 20px;
 }
@@ -10,7 +10,7 @@
 .item2 {
     position: relative;
     top: 125px;
-    right: 100px;
+    right: 150px;
     float: left;
     margin: 15px 0 0 20px;
 }
