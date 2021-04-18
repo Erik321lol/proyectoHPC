@@ -1,27 +1,16 @@
-﻿.salida {
-    position: relative;
-    top: 100px;
-    left: 400px;
-    display:block;
-}
-
-.entrada {
-    position: relative;
-    top: 100px;
-    left: 200px;
-
-}
-
-.cantidad {
-    position: relative;
-    top: 100px;
-    left: 600px;
-}
-
+﻿
 .item {
     position: relative;
     top: 75px;
-    left: 200px;
+    left: 350px;
     float: left;
     margin: 0 0 0 20px;
+}
+
+.item2 {
+    position: relative;
+    top: 125px;
+    right: 100px;
+    float: left;
+    margin: 15px 0 0 20px;
 }
