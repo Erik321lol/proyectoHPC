@@ -1,14 +1,16 @@
-﻿.entrar {
-    position:relative;
-    top: 100px;
-    left: 150px;
-}
-.salida {
+﻿
+.item {
     position: relative;
-    top: 100px;
-    left: 200px;
+    top: 75px;
+    left: 300px;
+    float: left;
+    margin: 0 0 0 20px;
 }
 
-.carrusel {
-    position:center;
+.item2 {
+    position: relative;
+    top: 125px;
+    right: 150px;
+    float: left;
+    margin: 15px 0 0 20px;
 }
