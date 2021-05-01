@@ -1,21 +1,57 @@
 ﻿<html>
 <head>
-    <title>DATOS DE LA RESERVA</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href ="~/css/Stylereservas.css" />
+
 </head>
 <body>
-    <h2>
-        Datos de la Reserva
-    </h2>
-    <input type="text" size="15" maxlength="30" value="Nombres" onfocus="if (this.value == 'Nombres') this.value='' " name="text_box_nombre" class="text_box_nombre">
-    <input type="text" size="15" maxlength="30" value="Apellidos" onfocus="if (this.value == 'Apellidos') this.value='' " name="txt_box_apellido" class="text_box_apellido">
-    <input type="text" size="15" maxlength="30" value="Correo Electronico" onfocus="if (this.value == 'Correo Electronico') this.value='' " name="txt_box_correo" class="text_box_correo">
-    <div class="item2">
-    <h6><br /></h6>
-    <button>Registrar </button>
+    <h2><u>Reserva</u></h2>
+
+    <div style="text-align: center">
+        <br />
+        <h3>Datos de la Reserva</h3>
     </div>
 
-</body>
 
+    <br />
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label for="Nombres" class="col-sm-5 control-label">Nombres</label>
+            <div class="col-sm-5">
+                <input type="text" name="Nombres" class="form-control" id="Nombres" placeholder="Nombres" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Apellidos" class="col-sm-5 control-label">Apellidos</label>
+            <div class="col-sm-5">
+                <input type="text" name="Apellidos" class="form-control" id="Apellidos" placeholder="Apellidos" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Correo Electronico" class="col-sm-5 control-label">Correo Electronico</label>
+            <div class="col-sm-5">
+                <input type="text" name="Correo Electronico" class="form-control" id="Correo Electronico" placeholder="Correo Electronico" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Telefono" class="col-sm-5 control-label">Telefono</label>
+            <div class="col-sm-5">
+                <input type="text" name="Telefono" class="form-control" id="Telefono" placeholder="Telefono" />
+            </div>
+        </div>
+        <div style="text-align: right">
+            <br />
+            <h5>Total de la Reserva:</h5>
+        </div>
+
+        <div style="text-align: right">
+            <br />
+            <input type="text" name="tipo_de_dato" />
+        </div>
+        <br />
+        <div style="text-align: center">
+            <button type="submit" class="btn btn-success">Reservar</button>
+        </div>
+
+    </form>
+</body>
 </html>
