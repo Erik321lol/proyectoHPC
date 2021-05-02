@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using proyectoHPC.Models;
 using System;
@@ -8,10 +9,14 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
+
 namespace proyectoHPC.Controllers
 {
     public class HomeController : Controller
     {
+        
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -40,6 +45,62 @@ namespace proyectoHPC.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult login()
+        {
+            return View();
+            
+        }
+
+        public string generarToken()
+        {
+            var ran = new Random();
+            return ran.Next().ToString();
+        }
+
+        [HttpPost]
+        public IActionResult login(String usuario, String contrasena)
+        {
+            String contra = "";
+            coneccion.abrir();
+            SqlCommand cons = new SqlCommand("SELECT contraseña FROM administrador WHERE usuario = '" + usuario + "'", coneccion.con);
+            SqlDataReader ingresar = cons.ExecuteReader();
+            while (ingresar.Read())
+            {
+                contra = ingresar["contraseña"].ToString();
+            }
+            coneccion.cerrar();
+
+            if (contra.Equals(contrasena))
+            {
+                return View("registro_de_cuartos");
+            }
+            else
+            {
+                return View("Index");
+            }
+            
+        }
+
+        public IActionResult crear_usuario()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult crear_usuario(String nombre, String apellido, String usuario, String contrasena)
+        {
+            coneccion.abrir();
+            SqlCommand cons = new SqlCommand("Insert Into administrador(nombre, apellido, usuario, contraseña) values ('" + nombre + "', '" + apellido + "', '" + usuario + "', '" + contrasena + "')", coneccion.con);
+            cons.ExecuteNonQuery();
+            coneccion.cerrar();
+            return View();
+        }
+
+        public IActionResult registro_de_cuartos()
         {
             return View();
         }
