@@ -28,10 +28,10 @@ namespace proyectoHPC.Controllers
         {
             return View();
             //agregar,editar,eliminar
-            coneccion.abrir();
+           // coneccion.abrir();
             //SqlCommand cons = new SqlCommand("Insert Into Cliente(Nombre1, Nombre2, Apellido1, Apellido2, Nit, Telefono, Direccion, Dpi) values ('Erik', 'Adolfo', 'Mendez', 'Guillen', '12345678', '12345678', 'ciudad',201845335)", coneccion.con);
             //cons.ExecuteNonQuery();
-            coneccion.cerrar();
+           // coneccion.cerrar();
 
             //consultar
             /*coneccion.abrir();
@@ -128,6 +128,17 @@ namespace proyectoHPC.Controllers
         public IActionResult reservas()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult reservas(String nombre, String apellido, String correo_electronico, String telefono )
+        {
+            coneccion.abrir();
+            SqlCommand cons = new SqlCommand("Insert Into cliente(nombre, apellido, telefono, correo_electronico) values ('" + nombre + "', '" + apellido + "', '" + telefono + "', '" + correo_electronico + "')", coneccion.con);
+            cons.ExecuteNonQuery();
+            coneccion.cerrar();
+            return View();
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
