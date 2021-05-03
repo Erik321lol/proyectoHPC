@@ -38,11 +38,11 @@
         <div class="container" align="center">
             <div class="item">
                 <h6>Entrada</h6>
-                <input type="date" name="entrada" />
+                <input type="date" name="entrada" required/>
             </div>
             <div class="item">
                 <h6>Salida</h6>
-                <input type="date" name="salida" />
+                <input type="date" name="salida" required/>
             </div>
             <div class="item">
                 <h6>Cantidad de personas</h6>
@@ -54,13 +54,13 @@
             </div>
             <div class="item">
                 <h6><br /></h6>
-                <button>Reservar</button>
+                <button type="submit" class="btn btn-success" href=""><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="reservas">Reservar</a></button>
             </div>
         </div>
 
         <div class="item2">
             <h6><br /></h6>
-            <button>Registrar boleta de pago</button>
+            <button type="submit" href=class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="reservas"> Registrar boleta de pago</button>
         </div>  
 </body>
 </html>
