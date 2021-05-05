@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Rotativa.AspNetCore;
+
 
 
 
@@ -85,6 +87,14 @@ namespace proyectoHPC.Controllers
             
         }
 
+        public IActionResult Boleta()
+        {
+
+            return new ViewAsPdf("Boleta")
+            {
+
+            };
+        }
         public IActionResult crear_usuario()
         {
             return View();
