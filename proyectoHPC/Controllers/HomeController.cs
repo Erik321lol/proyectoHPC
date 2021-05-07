@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Rotativa.AspNetCore;
+
 
 
 
@@ -85,6 +87,14 @@ namespace proyectoHPC.Controllers
             
         }
 
+        public IActionResult Boleta()
+        {
+
+            return new ViewAsPdf("Boleta")
+            {
+
+            };
+        }
         public IActionResult crear_usuario()
         {
             return View();
@@ -130,7 +140,70 @@ namespace proyectoHPC.Controllers
             return View();
         }
 
+        public IActionResult eliminar()
+        {
+            return View();
+        }
+
         [HttpPost]
+        public IActionResult eliminar(String usuario, String contraa)
+        {
+            String contra = "";
+                coneccion.abrir();
+                SqlCommand cons1 = new SqlCommand("Select contraseña from administrador where usuario= '" + usuario + "'", coneccion.con);
+                SqlDataReader ingresar1 = cons1.ExecuteReader();
+                while (ingresar1.Read())
+                {
+                    contra = ingresar1["contraseña"].ToString();
+                }
+
+                coneccion.cerrar();
+
+            if (contra == contraa)
+            {
+                coneccion.abrir();
+                SqlCommand cons = new SqlCommand("DELETE from administrador where usuario = '" + usuario + "'", coneccion.con);
+                cons.ExecuteNonQuery();
+                coneccion.cerrar();
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        public IActionResult cambiarcontra()
+        { 
+            return View();
+        }
+        [HttpPost]
+        public IActionResult cambiarcontra(String usuario, String contran, String contraa)
+        {
+            String contra = "";
+            coneccion.abrir();
+            SqlCommand cons1 = new SqlCommand("Select contraseña from administrador where usuario= '" + usuario + "'", coneccion.con);
+            SqlDataReader ingresar1 = cons1.ExecuteReader();
+            while (ingresar1.Read())
+            {
+                contra = ingresar1["contraseña"].ToString();
+            }
+            coneccion.cerrar();
+            if (contra == contraa)
+            {
+                coneccion.abrir();
+                SqlCommand cons = new SqlCommand("UPDATE administrador SET contraseña =" + contran + "WHERE usuario = '" + usuario + "';", coneccion.con);
+                cons.ExecuteNonQuery();
+                coneccion.cerrar();
+                return View();
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+            [HttpPost]
         public IActionResult reservas(String nombre, String apellido, String correo_electronico, String telefono )
         {
             coneccion.abrir();

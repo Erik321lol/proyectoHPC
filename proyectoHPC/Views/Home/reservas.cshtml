@@ -18,25 +18,25 @@
         <div class="form-group">
             <label for="Nombres" class="col-sm-5 control-label">Nombres</label>
             <div class="col-sm-5">
-                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombres" />
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombres" required/>
             </div>
         </div>
         <div class="form-group">
             <label for="Apellidos" class="col-sm-5 control-label">Apellidos</label>
             <div class="col-sm-5">
-                <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Apellidos" />
+                <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Apellidos" required/>
             </div>
         </div>
         <div class="form-group">
             <label for="Correo Electronico" class="col-sm-5 control-label">Correo Electronico</label>
             <div class="col-sm-5">
-                <input type="text" name="correo_electronico" class="form-control" id="correo_electronico" placeholder="Correo Electronico" />
+                <input type="text" name="correo_electronico" class="form-control" id="correo_electronico" placeholder="Correo Electronico" required />
             </div>
         </div>
         <div class="form-group">
             <label for="Telefono" class="col-sm-5 control-label">Telefono</label>
             <div class="col-sm-5">
-                <input type="text" name="telefono" class="form-control" id="telefono" placeholder="Telefono" />
+                <input type="text" name="telefono" class="form-control" id="telefono" placeholder="Telefono" required/>
             </div>
         </div>
         <div style="text-align: right">
@@ -48,9 +48,13 @@
             <br />
             <input type="text" name="tipo_de_dato" />
         </div>
-        <br />
-        <div style="text-align: center">
+
+        <div style="float:left">
             <button type="submit" class="btn btn-success">Reservar</button>
+        </div>
+        <div style="text-align: center">
+
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Boleta"><button type="button" class="btn btn-success">Generar Boleta</button></a>
         </div>
 
     </form>
