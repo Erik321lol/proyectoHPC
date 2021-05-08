@@ -9,41 +9,40 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <img src="~/imagenes/logo/logo.png" alt="Logo" class="logo" width="175" height="100" >
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hotel Posada Colonial</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="habitaciones">Habitaciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="entorno">Entorno</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="lugaresTuristicos">Lugares Turísticos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="contacto">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="reservas">Reserva</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="login"><img src="~/imagenes/login/login.png" alt="Logo" class="login" width="25" height="25"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+			<a class="navbar-brand position-static" asp-area="" asp-controller="Home" asp-action="Index">
+				<img src="~/imagenes/logo/logoBLANCO.png" alt="Logo" class="logo" width="175" height="100">Hotel Posada Colonial
+			</a>
+			<div class="container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+					<ul class="navbar-nav flex-grow-1">
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-dark" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-dark" asp-area="" asp-controller="Home" asp-action="habitaciones">HABITACIONES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-dark" asp-area="" asp-controller="Home" asp-action="entorno">ENTORNO</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-dark" asp-area="" asp-controller="Home" asp-action="lugaresTuristicos">LUGARES TURISTICOS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-dark" asp-area="" asp-controller="Home" asp-action="contacto">CONTACTO</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link btn btn-outline-dark" asp-area="" asp-controller="Home" asp-action="reservas">RESERVA</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<a class="navbar-brand border-0" asp-area="" asp-controller="Home" asp-action="login"><img src="~/imagenes/login/adminpngBlando.png" alt="Logo" class="login" width="25" height="25">Administrar</a>
+		</nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
