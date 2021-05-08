@@ -1,4 +1,8 @@
-﻿<!doctype html>
+﻿@model List<Tablas.Cliente>
+@{
+	ViewData["Title"] = "Cliente";
+}
+<!doctype html>
 <html lang="en">
 <head>
 	<!-- Required meta tags -->
@@ -16,33 +20,25 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th scope="col">#</th>
-				<th scope="col">First</th>
-				<th scope="col">Last</th>
-				<th scope="col">Handle</th>
+				<th scope="col">Codigo</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Apellido</th>
+				<th scope="col">Telefono</th>
+				<th scope="col">Correo</th>
 			</tr>
 		</thead>
 		<tbody>
+			@foreach (var item in Model)
+			{
 			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td>modo</td>
+				<td>@item.Cod_cliente</td>
+				<td>@item.Nombre</td>
+				<td>@item.Apellido</td>
+				<td>@item.Telefono</td>
+				<td>@item.Correo</td>
 			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td>fao</td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td colspan="2">Larry the Bird</td>
-				<td>twiotter</td>
-			</tr>
+			}
 		</tbody>
 	</table>
-
-
 </body>
 </html>

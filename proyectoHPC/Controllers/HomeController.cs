@@ -78,7 +78,7 @@ namespace proyectoHPC.Controllers
 
             if (contra.Equals(contrasena))
             {
-                return View("registro_de_cuartos");
+                return RedirectToAction("ControlHabitaciones", "Admin");
             }
             else
             {

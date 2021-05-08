@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using proyectoHPC.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,6 +11,8 @@ namespace proyectoHPC.Controllers
 {
 	public class Admin : Controller
 	{
+		public object Database { get; private set; }
+
 		// GET: Admin
 		public ActionResult Index()
 		{
@@ -29,10 +33,18 @@ namespace proyectoHPC.Controllers
 
 		public ActionResult ControlHabitaciones()
 		{
-			return View();
+			String _consulta = "Select * from cliente";
+			SqlDataReader Leer = coneccion.Consulta_Reader(_consulta);
+			List<Tablas.Cliente> aux = new List<Tablas.Cliente>();
+			while (Leer.Read())
+			{
+				aux.Add(new Tablas.Cliente((int)(long)Leer[0], (String)Leer[1], (String)Leer[2], (String)Leer[3], (String)Leer[4]));
+			}
+			return View(aux);
 		}
 
-		public ActionResult controlReserva()
+
+			public ActionResult controlReserva()
 		{
 			return View();
 		}

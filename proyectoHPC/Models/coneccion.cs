@@ -22,5 +22,20 @@ namespace proyectoHPC.Models
         {
             con.Close();
         }
+
+        public static void Reiniciar()
+        {
+            cerrar();
+            abrir();
+        }
+
+        public static SqlDataReader Consulta_Reader(string _consulta)
+        {
+            abrir();
+            SqlCommand consulta = new SqlCommand(_consulta, con);
+            SqlDataReader Leer = consulta.ExecuteReader();
+            return Leer;
+        }
+
     }
 }
