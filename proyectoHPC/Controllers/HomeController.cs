@@ -46,11 +46,6 @@ namespace proyectoHPC.Controllers
             coneccion.cerrar();*/
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public IActionResult login()
         {
             return View();
@@ -203,7 +198,7 @@ namespace proyectoHPC.Controllers
             }
         }
 
-            [HttpPost]
+        [HttpPost]
         public IActionResult reservas(String nombre, String apellido, String correo_electronico, String telefono )
         {
             coneccion.abrir();

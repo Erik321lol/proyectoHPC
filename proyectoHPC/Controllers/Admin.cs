@@ -40,6 +40,7 @@ namespace proyectoHPC.Controllers
 			{
 				aux.Add(new Tablas.Cliente((int)(long)Leer[0], (String)Leer[1], (String)Leer[2], (String)Leer[3], (String)Leer[4]));
 			}
+			coneccion.cerrar();
 			return View(aux);
 		}
 
