@@ -199,14 +199,13 @@ namespace proyectoHPC.Controllers
         }
 
         [HttpPost]
-        public IActionResult reservas(String nombre, String apellido, String correo_electronico, String telefono )
+        public IActionResult reservas(String nombre, String apellido, String correo_electronico, String telefono, DateTime fecha_entrada, DateTime fecha_salida )
         {
             coneccion.abrir();
-            SqlCommand cons = new SqlCommand("Insert Into cliente(nombre, apellido, telefono, correo_electronico) values ('" + nombre + "', '" + apellido + "', '" + telefono + "', '" + correo_electronico + "')", coneccion.con);
+            SqlCommand cons = new SqlCommand("Insert Into cliente(nombre, apellido, telefono, correo_electronico, fecha_entrada, fecha_salida) values ('" + nombre + "', '" + apellido + "', '" + telefono + "', '" + correo_electronico + "','" + fecha_entrada + "','" + fecha_salida + "')", coneccion.con);
             cons.ExecuteNonQuery();
             coneccion.cerrar();
             return View();
-
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

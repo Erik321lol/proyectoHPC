@@ -43,7 +43,31 @@
                 <input type="text" name="telefono" class="form-control" id="telefono" placeholder="Telefono" required />
             </div>
         </div>
+        <div class="form-group">
+            <label for="Telefono" class="col-sm-5 control-label">Fecha de etrada</label>
+            <div class="col-sm-5">
+                <input type="date" asp-format="{0:yyyy-MM-dd}" name="fecha_entrada" class="form-control" id="fecha_entrada" placeholder="fecha_entrada" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Telefono" class="col-sm-5 control-label">Fecha de salida</label>
+            <div class="col-sm-5">
+                <input type="date" asp-format="{0:yyyy-MM-dd}" name="fecha_salida" class="form-control" id="fecha_salida" placeholder="fecha_salida" required />
+            </div>
+        </div>
 
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="Cantidad de personas" aria-haspopup="true" aria-expanded="false">
+                Cantidad de personas
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="Cantidad de personas">
+                <a class="dropdown-item" href="#">1</a>
+                <a class="dropdown-item" href="#">2</a>
+                <a class="dropdown-item" href="#">3</a>
+            </div>
+        </div>
+        <br />
         <div style="float:left">
             <button type="submit" class="btn btn-success">Reservar</button>
         </div>
