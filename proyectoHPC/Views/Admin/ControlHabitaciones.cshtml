@@ -15,30 +15,36 @@
 
 </head>
 <body>
-	<h1>Clientes</h1>
+	<div class="container">
+		<h1>Clientes</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th scope="col">Codigo</th>
-				<th scope="col">Nombre</th>
-				<th scope="col">Apellido</th>
-				<th scope="col">Telefono</th>
-				<th scope="col">Correo</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model)
-			{
-			<tr>
-				<td>@item.Cod_cliente</td>
-				<td>@item.Nombre</td>
-				<td>@item.Apellido</td>
-				<td>@item.Telefono</td>
-				<td>@item.Correo</td>
-			</tr>
-			}
-		</tbody>
-	</table>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Telefono</th>
+					<th scope="col">Correo</th>
+					<th scope="col">Fecha de Entrada</th>
+					<th scope="col">Fecha de Salida</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td>@item.Cod_cliente</td>
+						<td>@item.Nombre</td>
+						<td>@item.Apellido</td>
+						<td>@item.Telefono</td>
+						<td>@item.Correo</td>
+						<td>@item.Fecha_Entrada</td>
+						<td>@item.Fecha_Salida</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

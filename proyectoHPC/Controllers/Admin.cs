@@ -38,7 +38,7 @@ namespace proyectoHPC.Controllers
 			List<Tablas.Cliente> aux = new List<Tablas.Cliente>();
 			while (Leer.Read())
 			{
-				aux.Add(new Tablas.Cliente((int)(long)Leer[0], (String)Leer[1], (String)Leer[2], (String)Leer[3], (String)Leer[4]));
+				aux.Add(new Tablas.Cliente((int)(long)Leer[0], (String)Leer[1], (String)Leer[2], (String)Leer[3], (String)Leer[4], (DateTime)Leer[5], (DateTime)Leer[6]));
 			}
 			coneccion.cerrar();
 			return View(aux);
